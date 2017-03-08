@@ -1,0 +1,2 @@
+class SweetNothingsController < ApplicationController
+end
