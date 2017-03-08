@@ -208,8 +208,8 @@ header .header-content .header-content-inner p {
 }
 .btn-default {
   color: #222222;
-  background-color: white;
-  border-color: white;
+  background-color: black;
+  border-color: black;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -220,8 +220,8 @@ header .header-content .header-content-inner p {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #222222;
-  background-color: #f2f2f2;
+  color: white;
+  background-color: black;
   border-color: #ededed;
 }
 .btn-default:active,
@@ -247,7 +247,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: white;
+  background-color: black;
   border-color: white;
 }
 .btn-default .badge {
