@@ -1,0 +1,2 @@
+class SweetNothing < ApplicationRecord
+end
