@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/selling-sweet-nothings" => "sweet_nothings#sweet_nothings_method"
 end
