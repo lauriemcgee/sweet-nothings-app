@@ -15,7 +15,7 @@ body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
-  border-color: #F05F40;
+  border-color: #F94FE2;
   border-width: 3px;
   max-width: 50px;
 }
@@ -26,7 +26,7 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #F05F40;
+  color: #F94FE2;
 }
 a:hover,
 a:focus {
@@ -46,7 +46,7 @@ p {
   margin-bottom: 20px;
 }
 .bg-primary {
-  background-color: #F05F40;
+  background-color: #F94FE2;
 }
 .bg-dark {
   background-color: #222222;
@@ -200,7 +200,7 @@ header .header-content .header-content-inner p {
   margin: 0 auto 20px;
 }
 .text-primary {
-  color: #F05F40;
+  color: #F94FE2;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -256,8 +256,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: white;
-  background-color: #F05F40;
-  border-color: #F05F40;
+  background-color: #F94FE2;
+  border-color: #F94FE2;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -269,8 +269,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #ee4b28;
-  border-color: #ed431f;
+  background-color: #000000;
+  border-color: #000000;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -295,11 +295,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #F05F40;
-  border-color: #F05F40;
+  background-color: #F94FE2;
+  border-color: #F94FE2;
 }
 .btn-primary .badge {
-  color: #F05F40;
+  color: #F94FE2;
   background-color: white;
 }
 .btn {

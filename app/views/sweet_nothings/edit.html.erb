@@ -1,0 +1,19 @@
+####change this to using current CSS with Bootstrap div containers.
+
+
+
+
+<%= form_tag "/sweet_nothings/#{@sweet_nothing.id}", method: :patch do %>
+  <div class="container">
+    <div class="head">
+      <h2>Say Hello</h2>
+    </div>
+      <input type="text" class= "form-control" value="<%= @sweet_nothing.name %>" name="form_name"/></br>
+      <input  type="text" class= "form-control" value="<%= @sweet_nothing.image %>" name="form_image" /></br>
+      <textarea type="text" class= "form-control" value="<%= @sweet_nothing.description %>" name="form_description"></textarea></br>
+    <div class="message">Message Sent</div>
+    <button id="submit" type="submit">
+      ....so, say it already!
+    </button>
+  </div>
+  <% end %>
