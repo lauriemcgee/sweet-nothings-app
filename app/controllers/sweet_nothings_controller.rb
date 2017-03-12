@@ -17,7 +17,7 @@ class SweetNothingsController < ApplicationController
   end
   def show
     @sweet_nothing_id = params[:id]
-    @sweet_nothing = SweetNothing.find_by[id: sweet_nothing_id]
+    @sweet_nothing = SweetNothing.find_by(id: @sweet_nothing_id)
     render "show.html.erb"
   end
   def edit
