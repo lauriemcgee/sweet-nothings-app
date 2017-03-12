@@ -2,3 +2,6 @@
 <h2><%= @sweet_nothing.value %></h2>
 <h3> <%= @sweet_nothing.value %> </h3>
 <p> <%= @sweet_nothing.value %> </p>
+
+<%= link_to "Destroy Sweet Nothing", "/sweet_nothings/#{@sweet_nothing.id}", method: :delete %>
+<a href="/sweet_nothings"> Back to more good vibes </a>

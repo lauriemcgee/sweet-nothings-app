@@ -34,4 +34,11 @@ class SweetNothingsController < ApplicationController
     @sweet_nothing.save
     render "update.html.erb"
   end
+  def destory
+    sweet_nothing_id = params[:id]
+    sweet_nothing = SweetNothing.find_by(id: sweet_nothing_id)
+    sweet_nothing.destroy
+    render "destroy.html.erb"
+
+  end
 end
