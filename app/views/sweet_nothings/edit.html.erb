@@ -1,16 +1,25 @@
 <!-- change this to using current CSS with Bootstrap div containers. -->
-
-<%= form_tag "/sweet_nothings/#{@sweet_nothing.id}", method: :patch do %>
-  <div class="container">
-    <div class="head">
-      <h2>Say Hello</h2>
-    </div>
-      <input type="text" class= "form-control" value="<%= @sweet_nothing.name %>" name="form_name"/></br>
-      <input  type="text" class= "form-control" value="<%= @sweet_nothing.image %>" name="form_image" /></br>
-      <textarea type="text" class= "form-control" value="<%= @sweet_nothing.description %>" name="form_description"></textarea></br>
-    <div class="message">Message Sent</div>
-    <button id="submit" type="submit">
-      ....so, say it already!
-    </button>
+<section class="no-padding" id="portfolio">
+  <div class="container-fluid">
+      <div class="col-lg-4 col-sm-6">
+        <%= form_tag "/sweet_nothings/#{@sweet_nothing.id}", method: :patch do %>
+          <div class="header">
+            <h2>Change it up</h2>
+          </div>
+          <div class= "form_group">
+            <%= label_tag :name %>
+            <% text_field :form_name, @sweet_nothing.name, class: "form-control" %>
+          </div>
+          <div class= "form_group">
+            <%= label_tag :image %>
+            <% text_field :form_image, @sweet_nothing.image, class: "form-control" %>
+          </div>
+          <div class= "form_group">
+            <%= label_tag :description %>
+            <% text_field :form_description, @sweet_nothing.description, class: "form-control" %>
+          </div>
+        <%= submit_tag "...so say it already!", class: "btn btn-primary" %>
+        <% end %>
+      </div>
   </div>
-  <% end %>
+</section>

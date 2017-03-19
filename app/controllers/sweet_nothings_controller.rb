@@ -1,6 +1,7 @@
 class SweetNothingsController < ApplicationController
   def index
-    @sweet_nothings = SweetNothing.all
+    sort_attribute = params[:sort_by] || "id"    
+    @sweet_nothings = SweetNothing.all.order(sort_attribute)
     render "index.html.erb"  
   end
   def new
@@ -13,7 +14,7 @@ class SweetNothingsController < ApplicationController
       description: params[:form_description]
       )
     sweet_nothing.save
-    render "create.html.erb"
+    redirect_to "index.html.erb"
   end
   def show
     @sweet_nothing_id = params[:id]
@@ -32,7 +33,7 @@ class SweetNothingsController < ApplicationController
     @sweet_nothing.image = params[:form_image]
     @sweet_nothing.description = params[:form_description]
     @sweet_nothing.save
-    render "update.html.erb"
+    redirect_to "index.html.erb"
   end
   def destory
     sweet_nothing_id = params[:id]
