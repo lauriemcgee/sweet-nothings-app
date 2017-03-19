@@ -43,8 +43,8 @@ class SweetNothingsController < ApplicationController
 
   end
   def random
-    random = rand(SweetNothing).count
-    @random_sweet_nothing = SweetNothing.first(:random => random)
+    sweet_nothing = SweetNothing.pluck(:id).shuffle[1]
+    @random_sweet_nothing = SweetNothing.find_by(id: sweet_nothing)
     render "random.html.erb"
   end
 end
