@@ -1,7 +1,7 @@
 class SweetNothingsController < ApplicationController
   def index
-    sort_attribute = params[:sort_by] || "id"    
-    @sweet_nothings = SweetNothing.all.order(sort_attribute)
+    sort_attribute = params[:sort_by] || "id"
+    @sweet_nothings = SweetNothing.all.order(sort_attribute => :desc)
     render "index.html.erb"  
   end
   def new
@@ -41,5 +41,10 @@ class SweetNothingsController < ApplicationController
     sweet_nothing.destroy
     render "destroy.html.erb"
 
+  end
+  def random
+    random = rand(SweetNothing).count
+    @random_sweet_nothing = SweetNothing.first(:random => random)
+    render "random.html.erb"
   end
 end

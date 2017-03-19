@@ -1,0 +1,8 @@
+<h1> Sweet Nothing </h1>
+<%= link_to "Edit", "/sweet_nothings/#{@random_sweet_nothing.id}/edit", method: :get %>
+<h2><%= @random_sweet_nothing.name %></h2>
+<h3> <%= @random_sweet_nothing.image %> </h3>
+<p> <%= @random_sweet_nothing.description %> </p>
+
+<%= link_to "Destroy Sweet Nothing", "/sweet_nothings/#{@random_sweet_nothing.id}", method: :delete %>
+<a href="/sweet_nothings"> Back to more good vibes </a>

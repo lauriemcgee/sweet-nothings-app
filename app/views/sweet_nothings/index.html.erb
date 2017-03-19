@@ -10,7 +10,18 @@
                 <h1 id="homeHeading">Chill out</h1>
                 <hr>
                 <p>Check 'em out, they're free</p>
-                <a href="#" data-toggle= "" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Sort
+                        <span class="caret"></span>
+                    </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="/sweet_nothings?sort_by=description">Sort by Author</a></li>
+                            <li><a href="/sweet_nothings?sort_by=id">Sort by date</a></li>
+                            <li><a href="/sweet_nothings/random">Random Sweet Nothing</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/sweet_nothings/new">Add a new sweet nothing</a></li>
+                        </ul>
+                    </div>
             </div>
         </div>
     </header>
