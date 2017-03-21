@@ -1,25 +1,24 @@
 <!-- change this to using current CSS with Bootstrap div containers. -->
-<section class="no-padding" id="portfolio">
+<div class="row" align="center">
   <div class="container-fluid">
       <div class="col-lg-4 col-sm-6">
-        <%= form_tag "/sweet_nothings/#{@sweet_nothing.id}", method: :patch do %>
-          <div class="header">
-            <h2>Change it up</h2>
+        <%= form_tag "/sweet_nothings/#{@sweet_nothing.id}", method: :patch do %>            
+        <h2>Change it up</h2>
           </div>
-          <div class= "form_group">
+          <div class= "form-group">
             <%= label_tag :name %>
-            <% text_field :form_name, @sweet_nothing.name, class: "form-control" %>
+            <% text_field_tag :form_name, @sweet_nothing.name, class: 'form-control' %>
           </div>
-          <div class= "form_group">
+          <div class= "form-group">
             <%= label_tag :image %>
-            <% text_field :form_image, @sweet_nothing.image, class: "form-control" %>
+            <% text_field_tag :form_image, @sweet_nothing.image, class: 'form-control' %>
           </div>
-          <div class= "form_group">
+          <div class= "form-group">
             <%= label_tag :description %>
-            <% text_field :form_description, @sweet_nothing.description, class: "form-control" %>
+            <% text_field_tag :form_description, @sweet_nothing.description, class: 'form-control' %>
           </div>
         <%= submit_tag "...so say it already!", class: "btn btn-primary" %>
         <% end %>
-      </div>
+        </div>
   </div>
 </section>

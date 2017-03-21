@@ -1,11 +1,16 @@
 class SweetNothingsController < ApplicationController
   def index
     sort_attribute = params[:sort_by] || "id"
-    @sweet_nothings = SweetNothing.all.order(sort_attribute => :desc)
+    sort_attribute_order = params[:order_by] || "asc"
+    @sweet_nothings = SweetNothing.all.order(sort_attribute => sort_attribute_order)
     render "index.html.erb"  
   end
   def new
     render "new.html.erb"
+  end
+  def search
+    @products = Product.where("name LIKE ?", "%" + params[:form_name] + "%")
+    render "index.html.erb"
   end
   def create
     sweet_nothing = SweetNothing.new(
